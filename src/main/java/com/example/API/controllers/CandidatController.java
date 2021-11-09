@@ -64,7 +64,7 @@ public class CandidatController {
         return new ResponseEntity<>(candidatUpdate,HttpStatus.OK);
     }
 
-    @DeleteMapping(value ="{candidat}")
+    @DeleteMapping(value ="/{candidat}")
     public void deleteOne(@PathVariable(name = "candidat",required = false) Candidat candidat) {
         if(candidat == null) {
             throw new ResponseStatusException(
